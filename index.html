@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online JPG to PDF and PDF to JPG converter. Professional PDF tools including merge, split, and compress.">
+    <meta name="keywords" content="jpg to pdf, pdf to jpg, merge pdf, split pdf, compress pdf, online converter">
+    <meta name="author" content="Omprakash Sahu">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="AT JPG ⇄ PDF Converter - Professional Online PDF Tools">
+    <meta property="og:description" content="Free online conversion between JPG and PDF formats. Merge, split, and compress PDF files with ease.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta property="og:url" content="https://at-jpg-pdf-converter.com">
+    
+    <title>AT JPG ⇄ PDF Converter - Professional Online PDF Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #f72585;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7ff 0%, #eef2ff 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 100px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        <header>
+  <img src="images/logo.jpeg" alt="Logo" class="logo">
+</header>
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+        }
+        
+        .btn-lg {
+            padding: 14px 32px;
+            font-size: 18px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Tools Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .tool-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            text-align: center;
+            padding: 40px 30px;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tool-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 32px;
+        }
+        
+        .tool-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .tool-card p {
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        /* Converter Tool */
+        .converter-section {
+            background: white;
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: var(--card-shadow);
+            margin: 60px auto;
+            max-width: 900px;
+        }
+        
+        .converter-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .converter-header h2 {
+            font-size: 2.4rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .converter-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .converter-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 12px 24px;
+            background: var(--light-gray);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 16px;
+        }
+        
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .converter-box {
+            border: 2px dashed var(--light-gray);
+            border-radius: 12px;
+            padding: 50px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            position: relative;
+            background: rgba(248, 249, 250, 0.5);
+        }
+        
+        .converter-box.active {
+            border-color: var(--accent);
+            background: rgba(72, 149, 239, 0.05);
+        }
+        
+        .converter-box i {
+            font-size: 56px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .converter-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .converter-box p {
+            color: var(--gray);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .file-label {
+            background: var(--primary);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 18px;
+        }
+        
+        .file-label:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        .file-list {
+            margin-top: 25px;
+            text-align: left;
+        }
+        
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .file-name {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 16px;
+        }
+        
+        .file-name i {
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+        .file-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .action-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+        
+        .action-btn:hover {
+            background: rgba(220, 53, 69, 0.1);
+            color: #dc3545;
+        }
+        
+        .watermark-option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            justify-content: center;
+            font-size: 17px;
+        }
+        
+        .watermark-option input {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--primary);
+        }
+        
+        .convert-btn {
+            padding: 16px 40px;
+            font-size: 18px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            color: var(--primary);
+            font-size: 28px;
+            min-width: 60px;
+            height: 60px;
+            background: rgba(67, 97, 238, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .feature-content h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-size: 1.5rem;
+        }
+        
+        .feature-content p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-col a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.05rem;
+        }
+        
+        .footer-col a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        
+        .contact-item i {
+            color: var(--accent);
+            margin-top: 4px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            color: white;
+            font-size: 18px;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 1rem;
+        }
+        
+        .developer {
+            margin-top: 10px;
+            font-size: 1.05rem;
+        }
+        
+        .developer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+            
+            .converter-section {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero {
+                padding: 80px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .converter-tabs {
+                gap: 6px;
+            }
+            
+            .tab-btn {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+            
+            .converter-box {
+                padding: 30px 15px;
+            }
+            
+            .converter-box h3 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .tool-card {
+                padding: 30px 20px;
+            }
+            
+            .tool-card h3 {
+                font-size: 1.5rem;
+            }
+            
+            .converter-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        /* Ad Placeholder */
+        .ad-container {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .ad-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .ad-placeholder {
+            height: 250px;
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-weight: 500;
+            font-size: 18px;
+        }
+        
+        /* Watermark Notice */
+        .watermark-notice {
+            background: rgba(72, 149, 239, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 16px;
+        }
+        
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+        
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 220px;
+            background-color: var(--dark);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 12px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.95rem;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 10px;
+            background: var(--light-gray);
+            border-radius: 5px;
+            margin: 25px 0;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+        
+        /* Result Section */
+        .result-section {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: rgba(76, 201, 240, 0.1);
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        
+        .result-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .result-icon {
+            font-size: 56px;
+            color: var(--success);
+        }
+        
+        .result-section h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+        }
+        
+        .result-section p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        
+        /* Cookie Consent */
+        .cookie-consent {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            display: none;
+        }
+        
+        .cookie-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .cookie-content a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">AT</div>
+                    <span>JPG ⇄ PDF Converter</span>
+                </a>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#all-tools">All Tools</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Professional JPG to PDF Converter</h1>
+            <p>Free online conversion between JPG and PDF formats. Fast, secure, and easy to use with no watermarks or quality loss.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-lg">
+                    <i class="fas fa-file-image"></i> Convert JPG to PDF
+                </button>
+                <button class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.15); color: white; border-color: white;">
+                    <i class="fas fa-file-pdf"></i> Convert PDF to JPG
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Tools -->
+    <section class="container" id="all-tools">
+        <div class="section-title">
+            <h2>Our Essential Tools</h2>
+            <p>All tools are completely free to use with no registration required</p>
+        </div>
+        
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-file-image"></i>
+                </div>
+                <h3>JPG to PDF</h3>
+                <p>Convert your JPG images to PDF documents with just a few clicks</p>
+                <button class="btn btn-primary" data-tool="jpg-to-pdf">Convert Now</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3>PDF to JPG</h3>
+                <p>Extract images from PDF files or convert pages to JPG format</p>
+                <button class="btn btn-primary" data-tool="pdf-to-jpg">Convert Now</button>
+            </div>
+        </div>
+        
+        <div class="section-title" style="margin-top: 80px;">
+            <h2>Advanced PDF Tools</h2>
+            <p>Professional PDF utilities for all your document needs</p>
+        </div>
+        
+        <div class="tools-grid">
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-object-group"></i>
+                </div>
+                <h3>Merge PDF</h3>
+                <p>Combine multiple PDF files into one organized document</p>
+                <button class="btn btn-primary" data-tool="merge-pdf">Merge Now</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h3>Split PDF</h3>
+                <p>Separate one PDF into multiple files or extract specific pages</p>
+                <button class="btn btn-primary" data-tool="split-pdf">Split Now</button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-compress-alt"></i>
+                </div>
+                <h3>Compress PDF</h3>
+                <p>Reduce file size without sacrificing quality</p>
+                <button class="btn btn-primary" data-tool="compress-pdf">Compress Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Converter Tool -->
+    <section class="container">
+        <div class="converter-section">
+            <div class="converter-header">
+                <h2 id="converter-title">JPG to PDF Converter</h2>
+                <p id="converter-desc">Convert your images to PDF format in seconds. Drag & drop files to begin.</p>
+            </div>
+            
+            <div class="converter-tabs">
+                <button class="tab-btn active" data-tool="jpg-to-pdf">JPG to PDF</button>
+                <button class="tab-btn" data-tool="pdf-to-jpg">PDF to JPG</button>
+                <button class="tab-btn" data-tool="merge-pdf">Merge PDF</button>
+                <button class="tab-btn" data-tool="split-pdf">Split PDF</button>
+                <button class="tab-btn" data-tool="compress-pdf">Compress PDF</button>
+            </div>
+            
+            <div class="converter-box">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3 id="upload-title">Upload JPG Files</h3>
+                <p id="upload-desc">Drag & drop files here or click to browse</p>
+                <p style="font-size: 0.95rem; color: var(--gray); margin-top: 10px;">Max file size: 25MB per file</p>
+                
+                <input type="file" id="file-upload" class="file-input" accept=".jpg, .jpeg" multiple>
+                <label for="file-upload" class="file-label">
+                    <i class="fas fa-folder-open"></i> Select Files
+                </label>
+                
+                <div class="file-list">
+                    <!-- Files will be listed here dynamically -->
+                </div>
+            </div>
+            
+            <div class="watermark-option">
+                <input type="checkbox" id="watermark" checked>
+                <label for="watermark">Add "AT Converter" watermark to output files</label>
+                <div class="tooltip">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="tooltip-text">You can remove the watermark by watching a short ad after conversion</span>
+                </div>
+            </div>
+            
+            <div class="watermark-notice">
+                <p><i class="fas fa-info-circle"></i> Watermarks help us keep this service free. You can remove them by watching a short ad after conversion.</p>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            
+            <div class="result-section" id="result-section">
+                <div class="result-content">
+                    <i class="fas fa-check-circle result-icon"></i>
+                    <h3>Your file is ready!</h3>
+                    <p id="result-message">Conversion completed successfully. Your PDF file is ready for download.</p>
+                    <a href="#" class="btn btn-primary" id="download-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                    <button class="btn btn-outline" id="remove-watermark-btn" style="margin-top: 15px;">
+                        <i class="fas fa-ad"></i> Remove Watermark with Ad
+                    </button>
+                </div>
+            </div>
+            
+            <div class="ad-container">
+                <div class="ad-label">Advertisement</div>
+                <div class="ad-placeholder" id="ad-banner">
+                    Google AdSense Banner (728x90)
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <button class="btn btn-primary convert-btn" id="process-btn">
+                    <i class="fas fa-bolt"></i> Convert to PDF Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose AT Converter</h2>
+                <p>Professional tools trusted by thousands of users daily</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Secure Processing</h3>
+                        <p>All files are processed securely and automatically deleted after 1 hour. We never store your documents.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Fast Conversion</h3>
+                        <p>Our cloud infrastructure processes files in seconds, no matter how large they are.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Mobile Friendly</h3>
+                        <p>Access all tools from any device, anywhere. Our platform works perfectly on mobile browsers.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>No Limits</h3>
+                        <p>Convert as many files as you need without restrictions. Free for personal and commercial use.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Cloud Integration</h3>
+                        <p>Connect to Google Drive, Dropbox, and OneDrive for seamless file transfers.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-highlighter"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>High Quality</h3>
+                        <p>Maintain original quality with our advanced conversion algorithms. No quality loss guaranteed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AT JPG ⇄ PDF Converter</h3>
+                    <p>Professional PDF tools for everyone. Free, secure, and easy to use online PDF utilities.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Tools</h3>
+                    <ul>
+                        <li><a href="#" data-tool="jpg-to-pdf">JPG to PDF</a></li>
+                        <li><a href="#" data-tool="pdf-to-jpg">PDF to JPG</a></li>
+                        <li><a href="#" data-tool="merge-pdf">Merge PDF</a></li>
+                        <li><a href="#" data-tool="split-pdf">Split PDF</a></li>
+                        <li><a href="#" data-tool="compress-pdf">Compress PDF</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 id="contact">Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>alltools321@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9065309100</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Motihari, Bihar, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 AT JPG ⇄ PDF Converter. All rights reserved.</p>
+                <p class="developer">Developed by <a href="#">Omprakash Sahu</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookie-consent">
+        <div class="cookie-content">
+            <h3>Cookie Consent</h3>
+            <p>We use cookies to enhance your experience, analyze site traffic, and serve targeted advertisements. By continuing to use this site, you consent to our use of cookies as described in our <a href="#privacy">Privacy Policy</a>.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="btn btn-primary" id="accept-cookies">Accept All</button>
+            <button class="btn btn-outline" id="reject-cookies">Reject Non-Essential</button>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Navigation functionality
+        document.querySelectorAll('[data-tool]').forEach(button => {
+            button.addEventListener('click', function() {
+                const tool = this.getAttribute('data-tool');
+                
+                // Update tool tab
+                document.querySelectorAll('.tab-btn').forEach(tab => tab.classList.remove('active'));
+                document.querySelector(`.tab-btn[data-tool="${tool}"]`).classList.add('active');
+                
+                // Update tool UI
+                updateToolUI(tool);
+                
+                // Scroll to converter
+                document.querySelector('.converter-section').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        
+        // Tool UI configuration
+        function updateToolUI(tool) {
+            const title = document.getElementById('converter-title');
+            const desc = document.getElementById('converter-desc');
+            const uploadTitle = document.getElementById('upload-title');
+            const uploadDesc = document.getElementById('upload-desc');
+            const processBtn = document.getElementById('process-btn');
+            const fileInput = document.getElementById('file-upload');
+            
+            // Reset UI elements
+            document.querySelector('.file-list').innerHTML = '';
+            document.querySelector('.converter-box').classList.remove('active');
+            document.getElementById('result-section').style.display = 'none';
+            document.querySelector('.progress-container').style.display = 'none';
+            
+            switch(tool) {
+                case 'jpg-to-pdf':
+                    title.textContent = 'JPG to PDF Converter';
+                    desc.textContent = 'Convert your images to PDF format in seconds. Drag & drop files to begin.';
+                    uploadTitle.textContent = 'Upload JPG Files';
+                    uploadDesc.textContent = 'Drag & drop files here or click to browse';
+                    processBtn.innerHTML = '<i class="fas fa-bolt"></i> Convert to PDF Now';
+                    fileInput.accept = '.jpg, .jpeg';
+                    break;
+                    
+                case 'pdf-to-jpg':
+                    title.textContent = 'PDF to JPG Converter';
+                    desc.textContent = 'Extract images from PDF files or convert pages to JPG format.';
+                    uploadTitle.textContent = 'Upload PDF Files';
+                    uploadDesc.textContent = 'Drag & drop files here or click to browse';
+                    processBtn.innerHTML = '<i class="fas fa-bolt"></i> Convert to JPG Now';
+                    fileInput.accept = '.pdf';
+                    break;
+                    
+                case 'merge-pdf':
+                    title.textContent = 'PDF Merger';
+                    desc.textContent = 'Combine multiple PDF files into one organized document.';
+                    uploadTitle.textContent = 'Upload PDF Files';
+                    uploadDesc.textContent = 'Drag & drop multiple files here or click to browse';
+                    processBtn.innerHTML = '<i class="fas fa-bolt"></i> Merge PDFs Now';
+                    fileInput.accept = '.pdf';
+                    break;
+                    
+                case 'split-pdf':
+                    title.textContent = 'PDF Splitter';
+                    desc.textContent = 'Separate one PDF into multiple files or extract specific pages.';
+                    uploadTitle.textContent = 'Upload PDF File';
+                    uploadDesc.textContent = 'Drag & drop file here or click to browse';
+                    processBtn.innerHTML = '<i class="fas fa-bolt"></i> Split PDF Now';
+                    fileInput.accept = '.pdf';
+                    break;
+                    
+                case 'compress-pdf':
+                    title.textContent = 'PDF Compressor';
+                    desc.textContent = 'Reduce file size without sacrificing quality.';
+                    uploadTitle.textContent = 'Upload PDF File';
+                    uploadDesc.textContent = 'Drag & drop file here or click to browse';
+                    processBtn.innerHTML = '<i class="fas fa-bolt"></i> Compress PDF Now';
+                    fileInput.accept = '.pdf';
+                    break;
+            }
+        }
+        
+        // File upload functionality
+        const fileInput = document.getElementById('file-upload');
+        const fileList = document.querySelector('.file-list');
+        const converterBox = document.querySelector('.converter-box');
+        
+        fileInput.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                converterBox.classList.add('active');
+                fileList.innerHTML = '';
+                
+                for (const file of this.files) {
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'file-item';
+                    
+                    fileItem.innerHTML = `
+                        <div class="file-name">
+                            <i class="fas ${getFileIcon(file.name)}"></i>
+                            <span>${file.name} (${formatFileSize(file.size)})</span>
+                        </div>
+                        <div class="file-actions">
+                            <button class="action-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    `;
+                    
+                    // Add remove functionality
+                    const removeBtn = fileItem.querySelector('.action-btn');
+                    removeBtn.addEventListener('click', () => {
+                        fileItem.remove();
+                        if (fileList.children.length === 0) {
+                            converterBox.classList.remove('active');
+                        }
+                    });
+                    
+                    fileList.appendChild(fileItem);
+                }
+            }
+        });
+        
+        // Get appropriate file icon
+        function getFileIcon(filename) {
+            const ext = filename.split('.').pop().toLowerCase();
+            if (ext === 'pdf') return 'fa-file-pdf';
+            if (['jpg', 'jpeg', 'png', 'gif'].includes(ext)) return 'fa-file-image';
+            return 'fa-file';
+        }
+        
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        // Process button functionality
+        document.getElementById('process-btn').addEventListener('click', function() {
+            if (fileInput.files.length === 0) {
+                alert('Please select at least one file to process');
+                return;
+            }
+            
+            const tool = document.querySelector('.tab-btn.active').getAttribute('data-tool');
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            this.disabled = true;
+            
+            // Show progress bar
+            const progressContainer = document.querySelector('.progress-container');
+            const progressBar = document.getElementById('progress-bar');
+            progressContainer.style.display = 'block';
+            progressBar.style.width = '0%';
+            
+            // Simulate processing
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.floor(Math.random() * 10) + 5;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    
+                    // Show result
+                    setTimeout(() => {
+                        this.disabled = false;
+                        this.innerHTML = '<i class="fas fa-sync-alt"></i> Process Again';
+                        progressContainer.style.display = 'none';
+                        
+                        // Show result section
+                        const resultSection = document.getElementById('result-section');
+                        const downloadBtn = document.getElementById('download-btn');
+                        const resultMessage = document.getElementById('result-message');
+                        
+                        resultSection.style.display = 'block';
+                        
+                        // Set result message based on tool
+                        switch(tool) {
+                            case 'jpg-to-pdf':
+                                resultMessage.textContent = 'Your JPG images have been successfully converted to PDF. Your file is ready for download.';
+                                downloadBtn.innerHTML = '<i class="fas fa-download"></i> Download PDF';
+                                break;
+                            case 'pdf-to-jpg':
+                                resultMessage.textContent = 'Your PDF has been successfully converted to JPG images.';
+                                downloadBtn.innerHTML = '<i class="fas fa-download"></i> Download JPG Files';
+                                break;
+                            case 'merge-pdf':
+                                resultMessage.textContent = 'Your PDF files have been successfully merged into a single document.';
+                                downloadBtn.innerHTML = '<i class="fas fa-download"></i> Download Merged PDF';
+                                break;
+                            case 'split-pdf':
+                                resultMessage.textContent = 'Your PDF has been successfully split into multiple files.';
+                                downloadBtn.innerHTML = '<i class="fas fa-download"></i> Download Split Files';
+                                break;
+                            case 'compress-pdf':
+                                const originalSize = fileInput.files[0].size;
+                                const compressedSize = Math.round(originalSize * 0.65);
+                                resultMessage.textContent = `PDF compressed successfully. Reduced from ${formatFileSize(originalSize)} to ${formatFileSize(compressedSize)} (35% reduction).`;
+                                downloadBtn.innerHTML = '<i class="fas fa-download"></i> Download Compressed PDF';
+                                break;
+                        }
+                        
+                        // Scroll to result
+                        resultSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+                }
+                progressBar.style.width = `${progress}%`;
+            }, 150);
+        });
+        
+        // Download button functionality
+        document.getElementById('download-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('In a real application, this would download your processed file. This is a frontend demo.');
+        });
+        
+        // Remove watermark functionality
+        document.getElementById('remove-watermark-btn').addEventListener('click', function() {
+            // Show ad placeholder
+            const adBanner = document.getElementById('ad-banner');
+            adBanner.innerHTML = 'Rewarded Ad Playing...<br><small>Thank you for supporting us!</small>';
+            adBanner.style.fontSize = '24px';
+            adBanner.style.flexDirection = 'column';
+            adBanner.style.gap = '15px';
+            
+            // Simulate ad completion after 5 seconds
+            setTimeout(() => {
+                alert('Ad completed! Watermark has been removed from your file.');
+                document.getElementById('download-btn').textContent = 'Download Watermark-Free File';
+            }, 5000);
+        });
+        
+        // Tab switching
+        document.querySelectorAll('.tab-btn').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Update tool UI
+                const tool = this.getAttribute('data-tool');
+                updateToolUI(tool);
+            });
+        });
+        
+        // Cookie consent
+        const cookieConsent = document.getElementById('cookie-consent');
+        if (!localStorage.getItem('cookiesAccepted')) {
+            setTimeout(() => {
+                cookieConsent.style.display = 'flex';
+            }, 3000);
+        }
+        
+        document.getElementById('accept-cookies').addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.style.display = 'none';
+        });
+        
+        document.getElementById('reject-cookies').addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.style.display = 'none';
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Initialize tool UI
+        updateToolUI('jpg-to-pdf');
+    </script>
+</body>
+</html>
